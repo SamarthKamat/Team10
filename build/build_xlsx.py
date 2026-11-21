@@ -6,6 +6,7 @@ from openpyxl.worksheet.datavalidation import DataValidation
 import lens_data as d
 
 OUT = sys.argv[1]
+FINAL = len(sys.argv) > 2 and sys.argv[2] == "final"
 os.makedirs(f"{OUT}/1 Lens/Working", exist_ok=True)
 HDR = ["Domain", "Construct", "Indicator", "NEP stage", "EBA tag", "Source"]
 
@@ -38,7 +39,7 @@ wb = Workbook()
 ws = wb.active; ws.title = "README"
 lines = [
  ("Lens_ConstructMap_v1 · Project A Lens · Deliverable D1 (Construct Map)", True),
- ("Owner: SRS (Lens lead) · Reviewer: ANA · Data owner: AB · Version 1 · 23 Nov 2026 · Status: READY FOR ANA REVIEW (T2.4)", False),
+ ("Owner: SRS (Lens lead) · Reviewer: ANA · Data owner: AB · " + ("Version 1 FINAL · 27 Nov 2026 · Status: FINAL (D1) after ANA review; do not edit in Final/" if FINAL else "Version 1 · 23 Nov 2026 · Status: READY FOR ANA REVIEW (T2.4)"), False),
  ("", False),
  ("MAIN RESULT", True),
  ("Lens D1 covers 3 domains, 18 constructs and 5 stages: 90 indicators. Each indicator is one observable, positive behaviour with a source.", False),
@@ -220,5 +221,30 @@ logs = [
 ]
 table(ws, ["Log", "Date", "Entry", "Who", "Reason / action / status"], logs, [18, 12, 90, 30, 55])
 
-wb.save(f"{OUT}/1 Lens/Working/Lens_ConstructMap_v1.xlsx")
+if FINAL:
+    import subprocess
+    ws = wb.create_sheet("QA_Audit")
+    out = subprocess.run([sys.executable, "-I", os.path.join(os.path.dirname(__file__), "audit_d1.py"),
+                          f"{OUT}/1 Lens/Working/Lens_ConstructMap_v1.csv"], capture_output=True, text=True).stdout
+    arows = [[c.strip() for c in l.strip("|").split("|")] for l in out.splitlines() if l.startswith("| ") and not l.startswith("| Check")]
+    table(ws, ["Automated check (build/audit_d1.py)", "Result", "Detail"], arows, [55, 12, 110])
+    ws.cell(row=len(arows) + 3, column=1, value="REVIEW rows were read by SRS: the negation words describe task content (odd-one-out, likes/dislikes, cause), and 'fast or slow' is musical tempo. No time limit is set anywhere.")
+    ws = wb.create_sheet("Review_Signoff")
+    sign = [
+     ["1", "Each indicator is ONE behaviour that an observer can see", "ANA", "", ""],
+     ["2", "Each indicator fits its NEP stage", "ANA", "", ""],
+     ["3", "Each row cites a real source; links opened (Sources sheet, column E = Y)", "SRS", "", ""],
+     ["4", "Zero labels or diagnosis words", "ANA", "", ""],
+     ["5", "EBA tags confirmed or changed", "ANA", "", ""],
+     ["6", "Construct codes match Lens_ProfileSchema (AB) and Trajectory fields (SM)", "AB", "", ""],
+     ["7", "URF answers Q1–Q7 received, or team default logged in Decision log", "SRS", "", ""],
+     ["8", "Agreed with URF mentor and Trajectory team (D1 acceptance test)", "SRS, SC", "", ""],
+    ]
+    table(ws, ["#", "Sign-off item", "Who", "Done (Y/N)", "Date / comment"], sign, [5, 75, 12, 12, 40])
+    os.makedirs(f"{OUT}/1 Lens/Final", exist_ok=True)
+    wb.save(f"{OUT}/1 Lens/Final/Lens_ConstructMap_v1_FINAL.xlsx")
+    import shutil
+    shutil.copy(f"{OUT}/1 Lens/Working/Lens_ConstructMap_v1.csv", f"{OUT}/1 Lens/Final/Lens_ConstructMap_v1_FINAL.csv")
+else:
+    wb.save(f"{OUT}/1 Lens/Working/Lens_ConstructMap_v1.xlsx")
 print("saved")

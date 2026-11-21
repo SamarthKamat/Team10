@@ -65,3 +65,21 @@ Copy each block. Send in the group chat or Slack, not WhatsApp, if it contains a
 | Apply Anchal's comments; publish D1 FINAL | T4.1 | Fri 27 Nov 6 pm | Copy v1 → 1 Lens/Final/Lens_ConstructMap_v1_FINAL | After review |
 | URF Update 1 line | T4.1 | Fri 27 Nov | Message 4 | Send |
 | Hours log + Sunday check-in | T4.4 | Sun 29 Nov | Message 5, section 6 | Send |
+
+---
+
+## 8. To Ayush: scoring engine for D2/D3 (send Mon 30 Nov)
+
+> Hi Ayush, the D2 scoring rules and a working engine are in 1 Lens/Working: Lens_D2_ScoringRules_v1 and Lens_ScoringEngine_v1.py (run `--selftest` first: 15 checks). Input: learner_code, stage, construct_code, item_id, source, score (0–3 or NA). Output: <CODE>_score / _band / _n, domain scores, top_strengths, notes, as CSV + JSON. Please check the field names against Lens_ProfileSchema_v1_FINAL and tell me if anything differs. NA is never 0, and an empty score means "not enough evidence".
+
+## 9. To Souvik: two corrections to the Lens proposal / charter (send Mon 23 Nov)
+
+> Hi Souvik, two fixes for the Lens charter before CP1: (1) Proposal A says Funder-Ready is "Team 17" (subgoal 4 and the D4 acceptance test), but URF's project details and the programme overview say H · Funder-Ready is Team 22. (2) The proposal says "all six shades"; URF confirmed 7 shades (P1–P7) on 20 Nov. Lens now uses P1–P7. Can we log both in the Decision log and correct the charter?
+
+## 10. To Rishabh and Ayush: TwinWorks review (send by Fri 27 Nov)
+
+> Hi Rishabh, Ayush, my first TwinWorks review is in 3 TwinWorks/Working/TwinWorks_FitRules_LensReview_SRS_v1. Main points: an empty Lens score = unknown, not 0 (C1); hard checks must read support needs, never shade codes (C2); rank roles for one learner, never learners for one role (C6). There is also a draft role-family → Lens construct map for Ayush to reconcile with the NSQF/NCO links.
+
+## 11. To Anchal: content-validity ratings (send Mon 30 Nov, with the item bank)
+
+> Hi Anchal, when the item bank is in Working, please paste item IDs and text into Lens_ContentValidity_RatingSheet_v1 › Ratings (delete the 2 example rows). Each of us rates relevance 1–4 alone, by Wed 2 Dec. With 3–5 raters an item must reach I-CVI 1.00, otherwise it is revised on Thu 3 Dec.

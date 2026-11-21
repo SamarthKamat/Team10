@@ -1,0 +1,285 @@
+[
+  {
+    "learner_code": "EX-01",
+    "stage": "Preparatory",
+    "lens_version": "v1",
+    "scoring_rule": "Option A (D2 v1)",
+    "constructs": {
+      "MI_LIN": {
+        "score": 33,
+        "band": "emerging",
+        "n": 2,
+        "self_score": null
+      },
+      "MI_LOG": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "MI_SPA": {
+        "score": 50,
+        "band": "developing",
+        "n": 2,
+        "self_score": null
+      },
+      "MI_BOD": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "MI_MUS": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 1,
+        "self_score": null
+      },
+      "MI_INTER": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "MI_INTRA": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "MI_NAT": {
+        "score": 89,
+        "band": "strong",
+        "n": 3,
+        "self_score": null
+      },
+      "ER_SA": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "ER_SM": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "ER_SOC": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "ER_REL": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "ER_RDM": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "PR_PAT": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "PR_CLS": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "PR_SEQ": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "PR_CAU": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "PR_PRB": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      }
+    },
+    "domains": {
+      "MI": {
+        "score": 57,
+        "band": "developing",
+        "constructs_reported": 3
+      },
+      "ER": {
+        "score": null,
+        "band": "not enough evidence",
+        "constructs_reported": 0
+      },
+      "PR": {
+        "score": null,
+        "band": "not enough evidence",
+        "constructs_reported": 0
+      }
+    },
+    "notes": [
+      "MI_SPA item SPA-P-2: self-report 3 and observer 1 differ by 2+; discuss with learner and educator."
+    ],
+    "items_total": 11,
+    "items_na": 2,
+    "top_strengths": [
+      "MI_NAT",
+      "MI_SPA"
+    ]
+  },
+  {
+    "learner_code": "EX-02",
+    "stage": "Secondary",
+    "lens_version": "v1",
+    "scoring_rule": "Option A (D2 v1)",
+    "constructs": {
+      "MI_LIN": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "MI_LOG": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "MI_SPA": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "MI_BOD": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "MI_MUS": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "MI_INTER": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "MI_INTRA": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "MI_NAT": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "ER_SA": {
+        "score": 56,
+        "band": "developing",
+        "n": 6,
+        "self_score": null
+      },
+      "ER_SM": {
+        "score": 42,
+        "band": "developing",
+        "n": 4,
+        "self_score": null
+      },
+      "ER_SOC": {
+        "score": 33,
+        "band": "emerging",
+        "n": 2,
+        "self_score": null
+      },
+      "ER_REL": {
+        "score": 67,
+        "band": "strong",
+        "n": 2,
+        "self_score": null
+      },
+      "ER_RDM": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "PR_PAT": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "PR_CLS": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "PR_SEQ": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "PR_CAU": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      },
+      "PR_PRB": {
+        "score": null,
+        "band": "not enough evidence",
+        "n": 0,
+        "self_score": null
+      }
+    },
+    "domains": {
+      "MI": {
+        "score": null,
+        "band": "not enough evidence",
+        "constructs_reported": 0
+      },
+      "ER": {
+        "score": 50,
+        "band": "developing",
+        "constructs_reported": 4
+      },
+      "PR": {
+        "score": null,
+        "band": "not enough evidence",
+        "constructs_reported": 0
+      }
+    },
+    "notes": [],
+    "items_total": 16,
+    "items_na": 2,
+    "top_strengths": [
+      "ER_REL",
+      "ER_SA",
+      "ER_SM"
+    ]
+  }
+]
